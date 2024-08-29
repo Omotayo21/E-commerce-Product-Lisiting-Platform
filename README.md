@@ -26,49 +26,45 @@ yarn install
 ```
 ### Start the development server:
 
-bash
-Copy code
+```
 npm run dev
-# or
-yarn dev
+```
+
 Open the app in your browser:
 
 Visit http://localhost:3000 to see the application running.
 
-Building for Production
+### Building for Production
 To create an optimized production build, run:
 
-bash
-Copy code
+```
 npm run build
-# or
-yarn build
+ ```
+
 This will generate the optimized output in the .next directory.
 
-Running the Production Build
+### Running the Production Build
 To start the production server, run:
 
-bash
-Copy code
+```
 npm run start
-# or
-yarn start
-Design Decisions, Optimizations, and Trade-offs
-State Management: Redux Toolkit was chosen for state management due to its simplicity and ease of use. It provides a clear and predictable state flow, which is essential for managing product data consistently across the app.
+```
+ ## Design Decisions, Optimizations, and Trade-offs
 
-Local Storage: Local storage was used to persist product data, allowing users to see the same data even after a page reload. This approach was chosen for simplicity since a database was not required. However, local storage is not suitable for large-scale production apps where data needs to be shared across multiple devices.
 
-UI/UX: The UI is designed to be minimal and functional. Tailwind CSS was used to quickly style components while maintaining a consistent design. The design prioritizes usability, ensuring that the core features (adding, editing, deleting, and viewing products) are easy to access and use.
+-Local Storage: Local storage was used to persist product data, allowing users to see the same data even after a page reload. This approach was chosen for simplicity since a database was not required. However, local storage is not suitable for large-scale production apps where data needs to be shared across multiple devices.
 
-Routing: Next.js provides built-in routing that was leveraged for navigating between pages, including the main product listing page and the product editing page.
+-UI/UX: The UI is designed to be minimal and functional. Tailwind CSS was used to quickly style components while maintaining a consistent design. The design prioritizes usability, ensuring that the core features (adding, editing, deleting, and viewing products) are easy to access and use.
 
-Trade-offs: The use of local storage makes the app lightweight and easy to set up, but it limits data sharing between users. Additionally, since there is no server-side data, the application doesn't handle concurrent data changes from multiple users, which could be an issue in a multi-user environment.
+-Routing: Next.js provides built-in routing that was leveraged for navigating between pages, including the main product listing page and the product editing page.
 
-SEO Handling
+-Trade-offs: The use of local storage makes the app lightweight and easy to set up, but it limits data sharing between users. Additionally, since there is no server-side data, the application doesn't handle concurrent data changes from multiple users, which could be an issue in a multi-user environment.
+
+-SEO Handling
 SEO (Search Engine Optimization) was considered in the following ways:
 
-Page Titles and Meta Tags: Each page has a descriptive title, and meta tags can be customized for SEO. For instance, the product detail pages could include specific meta descriptions for better search engine indexing.
+Page Titles and Meta Tags: The app has a descriptive title, and meta tags can be customized for SEO. 
 
-Next.js's Built-in SEO Features: Next.js provides server-side rendering, which improves the crawlability of the website by search engines. This ensures that the content is indexed properly, and the app is visible in search engine results.
+-Next.js's Built-in SEO Features: Next.js provides server-side rendering, which improves the crawlability of the website by search engines. This ensures that the content is indexed properly, and the app is visible in search engine results.
 
-Semantic HTML: The app uses semantic HTML elements, which helps search engines understand the structure of the content, further enhancing SEO.
+-Semantic HTML: The app uses semantic HTML elements, which helps search engines understand the structure of the content, further enhancing SEO.
